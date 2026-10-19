@@ -9,6 +9,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
+    // Open the dashboard in the browser on `npm run dev` (not in CI).
+    open: !process.env.CI,
     proxy: { "/api": `http://localhost:${apiPort}` },
   },
   build: {

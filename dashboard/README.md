@@ -14,12 +14,11 @@ Browser (React + Chart.js)  ──/api/dashboard──▶  Express server  ─�
 
 ```bash
 cd dashboard
-npm install
-cp .env.example .env      # DATA_MODE=mock by default
-npm run dev
+npm run setup            # installs packages and creates .env (DATA_MODE=mock)
+npm run dev              # opens http://localhost:5173
 ```
 
-Open http://localhost:5173. The dashboard runs on generated sample data, marked with a "Sample data" badge.
+Leave `npm run dev` running while you work. Frontend edits appear in the browser as soon as you save, and the server restarts on its own when its code changes. The dashboard runs on generated sample data, marked with a "Sample data" badge.
 
 ## What's on the dashboard
 
